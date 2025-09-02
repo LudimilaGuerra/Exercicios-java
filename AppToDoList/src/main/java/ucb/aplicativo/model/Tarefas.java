@@ -17,7 +17,7 @@ public class Tarefas {
     private Long id;
     private String titulo;
     private String descricao;
-    private boolean completo;
+    private boolean completa;
     private LocalDateTime dataAgora;
 
     /**
@@ -80,16 +80,36 @@ public class Tarefas {
      * @return the completo
      */
     public boolean isCompleto() {
-        return completo;
+        return completa;
     }
 
     /**
      * @param completo the completo to set
      */
     public void setCompleto(boolean completo) {
-        this.completo = completo;
+        this.completa = completo;
     }
     
     
     /*Construtor */
+    public Tarefas() {
+        this.dataAgora = LocalDateTime.now();
+        this.completa = false;
+    }
+    
+    public Tarefas(String titulo) {
+        this();
+        this.titulo = titulo;
+    }
+    
+    public Tarefas(String titulo, String descricao) {
+        this(titulo);
+        this.descricao = descricao;
+    }
+    
+    public Tarefas(String titulo, String descricao, boolean completa) {
+        this(titulo, descricao);
+        this.id = id;
+        this.completa = completa;
+    }
 }
