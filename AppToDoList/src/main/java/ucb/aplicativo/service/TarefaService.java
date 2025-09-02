@@ -4,6 +4,9 @@
  */
 package ucb.aplicativo.service;
 
+import java.util.List;
+import ucb.aplicativo.model.Tarefas;
+import java.util.ArrayList;
 /**
  *
  * @author ludimila.guerra
